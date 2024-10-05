@@ -10,20 +10,20 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="**1. 确认要替换的硬盘，并标记为失效，移除**
+<meta name="description" content="** 1. 确认要替换的硬盘，并标记为失效，移除**
 
     mdadm /dev/md0 --fail /dev/sda1 --remove /dev/sda1
 
-**1. 在线拆除失效硬盘，并更换新硬盘，然后重新添加进raid**
+** 1. 在线拆除失效硬盘，并更换新硬盘，然后重新添加进raid**
 
     mdadm -a /dev/md0 /dev/sda1
 
-**1. 等待阵列重建完成，依次更换其他硬盘**
-**1. 扩展阵列容量至最大可用**
+** 1. 等待阵列重建完成，依次更换其他硬盘**
+** 1. 扩展阵列容量至最大可用**
 
     mdadm /dev/md0 -z max
 
-**1. 扩展文件系统**
+** 1. 扩展文件系统**
 
     resize2fs /dev/md0
 
@@ -33,20 +33,20 @@
 
   [1]: https://documentation.suse.com/sles/12-SP4/html/SLES-all/cha-raid-resize.html。">
 <meta property="og:title" content="raid5扩容笔记-mdadm">
-<meta property="og:description" content="**1. 确认要替换的硬盘，并标记为失效，移除**
+<meta property="og:description" content="** 1. 确认要替换的硬盘，并标记为失效，移除**
 
     mdadm /dev/md0 --fail /dev/sda1 --remove /dev/sda1
 
-**1. 在线拆除失效硬盘，并更换新硬盘，然后重新添加进raid**
+** 1. 在线拆除失效硬盘，并更换新硬盘，然后重新添加进raid**
 
     mdadm -a /dev/md0 /dev/sda1
 
-**1. 等待阵列重建完成，依次更换其他硬盘**
-**1. 扩展阵列容量至最大可用**
+** 1. 等待阵列重建完成，依次更换其他硬盘**
+** 1. 扩展阵列容量至最大可用**
 
     mdadm /dev/md0 -z max
 
-**1. 扩展文件系统**
+** 1. 扩展文件系统**
 
     resize2fs /dev/md0
 
@@ -125,17 +125,17 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p><strong>1. 确认要替换的硬盘，并标记为失效，移除</strong></p>
+<div class="markdown-body" id="postBody"><p>** 1. 确认要替换的硬盘，并标记为失效，移除**</p>
 <pre class="notranslate"><code class="notranslate">mdadm /dev/md0 --fail /dev/sda1 --remove /dev/sda1
 </code></pre>
-<p><strong>1. 在线拆除失效硬盘，并更换新硬盘，然后重新添加进raid</strong></p>
+<p>** 1. 在线拆除失效硬盘，并更换新硬盘，然后重新添加进raid**</p>
 <pre class="notranslate"><code class="notranslate">mdadm -a /dev/md0 /dev/sda1
 </code></pre>
-<p><strong>1. 等待阵列重建完成，依次更换其他硬盘</strong><br>
-<strong>1. 扩展阵列容量至最大可用</strong></p>
+<p>** 1. 等待阵列重建完成，依次更换其他硬盘**<br>
+** 1. 扩展阵列容量至最大可用**</p>
 <pre class="notranslate"><code class="notranslate">mdadm /dev/md0 -z max
 </code></pre>
-<p><strong>1. 扩展文件系统</strong></p>
+<p>** 1. 扩展文件系统**</p>
 <pre class="notranslate"><code class="notranslate">resize2fs /dev/md0
 </code></pre>
 <p>参考资料：<br>
