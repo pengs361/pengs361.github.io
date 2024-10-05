@@ -1,5 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Sat, 05 Oct 2024 12:05:39 +0000</lastBuildDate><managingEditor>大朋博客</managingEditor><ttl>60</ttl><webMaster>大朋博客</webMaster><item><title>批量ping命令</title><link>http://dpblog.cciz.cc/post/pi-liang-ping-ming-ling.html</link><description>在CMD，命令行输入如下代码：&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Sat, 05 Oct 2024 12:07:44 +0000</lastBuildDate><managingEditor>大朋博客</managingEditor><ttl>60</ttl><webMaster>大朋博客</webMaster><item><title>利用vaapi转换h264视频为h265</title><link>http://dpblog.cciz.cc/post/li-yong-vaapi-zhuan-huan-h264-shi-pin-wei-h265.html</link><description>**1、安装linux下intel闭源驱动**&#13;
+&#13;
+``apt install intel-media-va-driver-non-free i965-va-driver-shaders``&#13;
+&#13;
+**2、转换命令**&#13;
+``ffmpeg -hwaccel vaapi -vaapi_device /dev/dri/renderD128 -hwaccel_output_format vaapi -i test.m4 -c:v hevc_vaapi -c:a copy -qscale:v 18 test-265.mp4``。</description><guid isPermaLink="true">http://dpblog.cciz.cc/post/li-yong-vaapi-zhuan-huan-h264-shi-pin-wei-h265.html</guid><pubDate>Sat, 05 Oct 2024 12:07:08 +0000</pubDate></item><item><title>批量ping命令</title><link>http://dpblog.cciz.cc/post/pi-liang-ping-ming-ling.html</link><description>在CMD，命令行输入如下代码：&#13;
 ```&#13;
 for /L %d in（1,1,255） do ping 192.168.1.%d -n 1&#13;
 ```&#13;
