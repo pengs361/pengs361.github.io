@@ -1,5 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Sat, 05 Oct 2024 12:42:13 +0000</lastBuildDate><managingEditor>大朋博客</managingEditor><ttl>60</ttl><webMaster>大朋博客</webMaster><item><title>为linux版本火狐开启视频硬件解码</title><link>http://dpblog.cciz.cc/post/wei-linux-ban-ben-huo-hu-kai-qi-shi-pin-ying-jian-jie-ma.html</link><description>1、为 Firefox 启用 VA-API 支持&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Sat, 05 Oct 2024 12:43:14 +0000</lastBuildDate><managingEditor>大朋博客</managingEditor><ttl>60</ttl><webMaster>大朋博客</webMaster><item><title>解决Linux使用fcitx5输入法无法输入问题</title><link>http://dpblog.cciz.cc/post/jie-jue-Linux-shi-yong-fcitx5-shu-ru-fa-wu-fa-shu-ru-wen-ti.html</link><description>1、在Debian系统及其衍生发行版中安装：&#13;
+&#13;
+    apt-get install  fcitx5-frontend-qt5 fcitx5-frontend-gtk2 fcitx5-frontend-gtk3 fcitx5-pinyin fcitx5-chinese-addons fcitx5-chewing fcitx5-module-lua fcitx5-module-lua-common fcitx5-modules unicode-cldr-core&#13;
+&#13;
+配置相应文件&#13;
+配置/etc/environment文件或~/.pam_environment文件。</description><guid isPermaLink="true">http://dpblog.cciz.cc/post/jie-jue-Linux-shi-yong-fcitx5-shu-ru-fa-wu-fa-shu-ru-wen-ti.html</guid><pubDate>Sat, 05 Oct 2024 12:42:44 +0000</pubDate></item><item><title>为linux版本火狐开启视频硬件解码</title><link>http://dpblog.cciz.cc/post/wei-linux-ban-ben-huo-hu-kai-qi-shi-pin-ying-jian-jie-ma.html</link><description>1、为 Firefox 启用 VA-API 支持&#13;
 &#13;
 在 Firefox 中打开 about:config&#13;
 &#13;
