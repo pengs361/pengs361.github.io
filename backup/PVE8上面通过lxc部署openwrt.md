@@ -1,4 +1,5 @@
-1. ####创建 LXC 容器
+1. 创建 LXC 容器
+
 	- 登录到 PVE 宿主机 Shell
 ```
 #推荐使用官方镜像(版本会更新，按路径寻找对应rootfs.tar.gz包即可)
@@ -28,7 +29,9 @@ lxc.cgroup2.devices.allow: c 108:0 rwm
 lxc.mount.entry: /dev/ppp dev/ppp none bind,create=file
 lxc.mount.entry: /dev/net/tun dev/net/tun none bind,create=file
 ```
-1. #### 启动LXC进入终端后进行设置
+
+2. 启动LXC进入终端后进行设置
+
 	- 改密码
 	passwd
 	- 网络设置

@@ -10,7 +10,8 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="1. ####创建 LXC 容器
+<meta name="description" content="1. 创建 LXC 容器
+
 	- 登录到 PVE 宿主机 Shell
 ```
 #推荐使用官方镜像(版本会更新，按路径寻找对应rootfs.tar.gz包即可)
@@ -40,7 +41,9 @@ lxc.cgroup2.devices.allow: c 108:0 rwm
 lxc.mount.entry: /dev/ppp dev/ppp none bind,create=file
 lxc.mount.entry: /dev/net/tun dev/net/tun none bind,create=file
 ```
-1. #### 启动LXC进入终端后进行设置
+
+2. 启动LXC进入终端后进行设置
+
 	- 改密码
 	passwd
 	- 网络设置
@@ -53,7 +56,8 @@ lxc.mount.entry: /dev/net/tun dev/net/tun none bind,create=file
 	`src/gz dllkids https://op.dllkids.xyz/packages/x86_64/`
 	- ddns url方式，地址填写 ``https://1.ipw.cn/``。">
 <meta property="og:title" content="PVE8上面通过lxc部署openwrt">
-<meta property="og:description" content="1. ####创建 LXC 容器
+<meta property="og:description" content="1. 创建 LXC 容器
+
 	- 登录到 PVE 宿主机 Shell
 ```
 #推荐使用官方镜像(版本会更新，按路径寻找对应rootfs.tar.gz包即可)
@@ -83,7 +87,9 @@ lxc.cgroup2.devices.allow: c 108:0 rwm
 lxc.mount.entry: /dev/ppp dev/ppp none bind,create=file
 lxc.mount.entry: /dev/net/tun dev/net/tun none bind,create=file
 ```
-1. #### 启动LXC进入终端后进行设置
+
+2. 启动LXC进入终端后进行设置
+
 	- 改密码
 	passwd
 	- 网络设置
@@ -166,7 +172,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
     <div id="content">
 <div class="markdown-body" id="postBody"><ol>
-<li>####创建 LXC 容器
+<li>
+<p>创建 LXC 容器</p>
 <ul>
 <li>登录到 PVE 宿主机 Shell</li>
 </ul>
@@ -199,9 +206,9 @@ pct create：创建一个容器<br>
 lxc.mount.entry: /dev/ppp dev/ppp none bind,create=file
 lxc.mount.entry: /dev/net/tun dev/net/tun none bind,create=file
 </code></pre>
-<ol>
+<ol start="2">
 <li>
-<h4>启动LXC进入终端后进行设置</h4>
+<p>启动LXC进入终端后进行设置</p>
 <ul>
 <li>改密码<br>
 passwd</li>

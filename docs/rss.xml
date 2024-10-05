@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Sat, 05 Oct 2024 12:55:18 +0000</lastBuildDate><managingEditor>大朋博客</managingEditor><ttl>60</ttl><webMaster>大朋博客</webMaster><item><title>pve8下 lxc容器设置直通核显</title><link>http://dpblog.cciz.cc/post/pve8-xia-%20lxc-rong-qi-she-zhi-zhi-tong-he-xian.html</link><description>1. 安装核显驱动,PVE和LXC容器都要安装&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Sat, 05 Oct 2024 12:56:41 +0000</lastBuildDate><managingEditor>大朋博客</managingEditor><ttl>60</ttl><webMaster>大朋博客</webMaster><item><title>pve8下 lxc容器设置直通核显</title><link>http://dpblog.cciz.cc/post/pve8-xia-%20lxc-rong-qi-she-zhi-zhi-tong-he-xian.html</link><description>1. 安装核显驱动,PVE和LXC容器都要安装&#13;
 &#13;
 ```&#13;
 apt install intel-media-va-driver-non-free vainfo -y&#13;
@@ -16,7 +16,8 @@ root@pve:~# ls -l /dev/dri/&#13;
     crw-rw---- 1 root video  226,   0 Oct 13 12:39 card0&#13;
     crw-rw---- 1 root render 226, 128 Oct 13 12:39 renderD128&#13;
 ```&#13;
-这里的操作是挂载显卡的关键。</description><guid isPermaLink="true">http://dpblog.cciz.cc/post/pve8-xia-%20lxc-rong-qi-she-zhi-zhi-tong-he-xian.html</guid><pubDate>Sat, 05 Oct 2024 12:52:39 +0000</pubDate></item><item><title>PVE8上面通过lxc部署openwrt</title><link>http://dpblog.cciz.cc/post/PVE8-shang-mian-tong-guo-lxc-bu-shu-openwrt.html</link><description>1. ####创建 LXC 容器&#13;
+这里的操作是挂载显卡的关键。</description><guid isPermaLink="true">http://dpblog.cciz.cc/post/pve8-xia-%20lxc-rong-qi-she-zhi-zhi-tong-he-xian.html</guid><pubDate>Sat, 05 Oct 2024 12:52:39 +0000</pubDate></item><item><title>PVE8上面通过lxc部署openwrt</title><link>http://dpblog.cciz.cc/post/PVE8-shang-mian-tong-guo-lxc-bu-shu-openwrt.html</link><description>1. 创建 LXC 容器&#13;
+&#13;
 	- 登录到 PVE 宿主机 Shell&#13;
 ```&#13;
 #推荐使用官方镜像(版本会更新，按路径寻找对应rootfs.tar.gz包即可)&#13;
@@ -46,7 +47,9 @@ lxc.cgroup2.devices.allow: c 108:0 rwm&#13;
 lxc.mount.entry: /dev/ppp dev/ppp none bind,create=file&#13;
 lxc.mount.entry: /dev/net/tun dev/net/tun none bind,create=file&#13;
 ```&#13;
-1. #### 启动LXC进入终端后进行设置&#13;
+&#13;
+2. 启动LXC进入终端后进行设置&#13;
+&#13;
 	- 改密码&#13;
 	passwd&#13;
 	- 网络设置&#13;
