@@ -1,5 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Sat, 05 Oct 2024 11:56:55 +0000</lastBuildDate><managingEditor>大朋博客</managingEditor><ttl>60</ttl><webMaster>大朋博客</webMaster><item><title>Cisco 2960交换机配置</title><link>http://dpblog.cciz.cc/post/Cisco%202960-jiao-huan-ji-pei-zhi.html</link><description>### 1、 Cisco工作模式分类及作用&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Sat, 05 Oct 2024 11:59:01 +0000</lastBuildDate><managingEditor>大朋博客</managingEditor><ttl>60</ttl><webMaster>大朋博客</webMaster><item><title>思科交换机备份与还原</title><link>http://dpblog.cciz.cc/post/si-ke-jiao-huan-ji-bei-fen-yu-huan-yuan.html</link><description>TFTP软件下载：(备份与还原需要使用到的软件)&#13;
+&#13;
+http://tftpd32.jounin.net/tftpd32_download.html&#13;
+&#13;
+ &#13;
+&#13;
+ &#13;
+&#13;
+思科交换机备份与还原思路：&#13;
+&#13;
+一台电脑通过console端口连接到cisco 2960交换机，配置一个VLAN 10并分配IP地址和网关，电脑设置固定IP地址连接到cisco 2960交换机，确认交换机ping通这台电脑的IP地址，打开TFTP软件进行备份，通过超级终端连接cisco 2960交换机执行备份命令。</description><guid isPermaLink="true">http://dpblog.cciz.cc/post/si-ke-jiao-huan-ji-bei-fen-yu-huan-yuan.html</guid><pubDate>Sat, 05 Oct 2024 11:58:38 +0000</pubDate></item><item><title>Cisco 2960交换机配置</title><link>http://dpblog.cciz.cc/post/Cisco%202960-jiao-huan-ji-pei-zhi.html</link><description>### 1、 Cisco工作模式分类及作用&#13;
 &#13;
 用户模式仅答应基本的监测命令，在这种模式下不能改变路由器的配置。</description><guid isPermaLink="true">http://dpblog.cciz.cc/post/Cisco%202960-jiao-huan-ji-pei-zhi.html</guid><pubDate>Sat, 05 Oct 2024 11:56:27 +0000</pubDate></item><item><title>DELL R710 错误代码汇总 转载</title><link>http://dpblog.cciz.cc/post/DELL%20R710%20-cuo-wu-dai-ma-hui-zong-%20-zhuan-zai.html</link><description>E1422 CPU 1 machine check error . power cycle AC&#13;
 &#13;
