@@ -17,9 +17,8 @@
     找到config目录
     修改config.php文件,如果存在这个属性，就把值改为false；如果不存在，就增加下面这行配置
 
-'auth.bruteforce.protection.enabled'=>false,
-
-    保存
+`auth.bruteforce.protection.enabled'=>false,`
+保存
 ==========================以上办法无效===========================
 2）清空数据表
 
@@ -40,9 +39,8 @@ https://wuming.me/post/15/。">
     找到config目录
     修改config.php文件,如果存在这个属性，就把值改为false；如果不存在，就增加下面这行配置
 
-'auth.bruteforce.protection.enabled'=>false,
-
-    保存
+`auth.bruteforce.protection.enabled'=>false,`
+保存
 ==========================以上办法无效===========================
 2）清空数据表
 
@@ -131,10 +129,9 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 进入nextcloud根目录<br>
 找到config目录<br>
 修改config.php文件,如果存在这个属性，就把值改为false；如果不存在，就增加下面这行配置</p>
-<p>'auth.bruteforce.protection.enabled'=&gt;false,</p>
-<pre class="notranslate"><code class="notranslate">保存
-</code></pre>
-<p>==========================以上办法无效===========================<br>
+<p><code class="notranslate">auth.bruteforce.protection.enabled'=&gt;false,</code><br>
+保存<br>
+==========================以上办法无效===========================<br>
 2）清空数据表</p>
 <p>数据库里清除防暴的表：oc_bruteforce_attempts</p>
 <pre class="notranslate"><code class="notranslate">mysql -u root -p

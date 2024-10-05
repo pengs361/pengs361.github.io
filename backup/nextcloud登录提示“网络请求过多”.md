@@ -5,9 +5,8 @@
     找到config目录
     修改config.php文件,如果存在这个属性，就把值改为false；如果不存在，就增加下面这行配置
 
-'auth.bruteforce.protection.enabled'=>false,
-
-    保存
+`auth.bruteforce.protection.enabled'=>false,`
+保存
 ==========================以上办法无效===========================
 2）清空数据表
 
