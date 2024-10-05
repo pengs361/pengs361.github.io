@@ -1,5 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Sat, 05 Oct 2024 12:47:53 +0000</lastBuildDate><managingEditor>大朋博客</managingEditor><ttl>60</ttl><webMaster>大朋博客</webMaster><item><title>nextcloud登录提示“网络请求过多”</title><link>http://dpblog.cciz.cc/post/nextcloud-deng-lu-ti-shi-%E2%80%9C-wang-luo-qing-qiu-guo-duo-%E2%80%9D.html</link><description>测试了两种办法&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Sat, 05 Oct 2024 12:48:56 +0000</lastBuildDate><managingEditor>大朋博客</managingEditor><ttl>60</ttl><webMaster>大朋博客</webMaster><item><title>PVE删除local-lvm，并把空间合并到local</title><link>http://dpblog.cciz.cc/post/PVE-shan-chu-local-lvm%EF%BC%8C-bing-ba-kong-jian-he-bing-dao-local.html</link><description>**1、 删掉 local-lvm**&#13;
+&#13;
+    lvremove pve/data&#13;
+**2、将剩余空间全部扩充到 local 中**&#13;
+&#13;
+    lvextend -l+100%FREE /dev/mapper/pve-root&#13;
+    resize2fs /dev/mapper/pve-root&#13;
+**3、webui数据中心中移除local-lvm**&#13;
+**4、查看空间分布 lvs 或者 df -h**。</description><guid isPermaLink="true">http://dpblog.cciz.cc/post/PVE-shan-chu-local-lvm%EF%BC%8C-bing-ba-kong-jian-he-bing-dao-local.html</guid><pubDate>Sat, 05 Oct 2024 12:48:33 +0000</pubDate></item><item><title>nextcloud登录提示“网络请求过多”</title><link>http://dpblog.cciz.cc/post/nextcloud-deng-lu-ti-shi-%E2%80%9C-wang-luo-qing-qiu-guo-duo-%E2%80%9D.html</link><description>测试了两种办法&#13;
 1）修改nextcloud配置文件&#13;
     登录你的nextcloud服务器&#13;
     进入nextcloud根目录&#13;
