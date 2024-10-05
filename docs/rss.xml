@@ -1,5 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Sat, 05 Oct 2024 12:38:10 +0000</lastBuildDate><managingEditor>大朋博客</managingEditor><ttl>60</ttl><webMaster>大朋博客</webMaster><item><title>安装官方docker版本lychee后调优记录</title><link>http://dpblog.cciz.cc/post/an-zhuang-guan-fang-docker-ban-ben-lychee-hou-diao-you-ji-lu.html</link><description>1、安装完每次启动都会调整权限，这个时间取决于图片库文件数量，通常会很长时间，可以修改启动脚本解决&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Sat, 05 Oct 2024 12:39:03 +0000</lastBuildDate><managingEditor>大朋博客</managingEditor><ttl>60</ttl><webMaster>大朋博客</webMaster><item><title>Force backdrops for all users (10.8.x)-jellyfin</title><link>http://dpblog.cciz.cc/post/Force%20backdrops%20for%20all%20users%20%2810.8.x%29-jellyfin.html</link><description>/usr/share/jellyfin/web/main.jellyfin.bundle.js&#13;
+&#13;
+&#13;
+&#13;
+Force backdrops for all users (10.8.x)&#13;
+&#13;
+Modify this string in your main.jellyfin.bundle.js to default it to tick (forcing most users default.. unless disabled by them)&#13;
+&#13;
+    enableBackdrops:function(){return P}&#13;
+&#13;
+Change it to&#13;
+&#13;
+    enableBackdrops:function(){return _}&#13;
+&#13;
+。</description><guid isPermaLink="true">http://dpblog.cciz.cc/post/Force%20backdrops%20for%20all%20users%20%2810.8.x%29-jellyfin.html</guid><pubDate>Sat, 05 Oct 2024 12:38:39 +0000</pubDate></item><item><title>安装官方docker版本lychee后调优记录</title><link>http://dpblog.cciz.cc/post/an-zhuang-guan-fang-docker-ban-ben-lychee-hou-diao-you-ji-lu.html</link><description>1、安装完每次启动都会调整权限，这个时间取决于图片库文件数量，通常会很长时间，可以修改启动脚本解决&#13;
 &#13;
     docker exec -it lychee-web bash -c 'sed -i 's/sym\ \/uploads/sym/g' /entrypoint.sh'&#13;
 2、出于安全考虑，lychee官方不再支持修改land登录背景为在线背景，可以进入容器然后修改配置文件 config/secure-headers.php&#13;
