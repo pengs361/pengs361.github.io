@@ -1,5 +1,22 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Sat, 05 Oct 2024 12:40:45 +0000</lastBuildDate><managingEditor>大朋博客</managingEditor><ttl>60</ttl><webMaster>大朋博客</webMaster><item><title>xterm美化方法</title><link>http://dpblog.cciz.cc/post/xterm-mei-hua-fang-fa.html</link><description>1、在用户目录下面新建文件.Xresource&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Sat, 05 Oct 2024 12:41:23 +0000</lastBuildDate><managingEditor>大朋博客</managingEditor><ttl>60</ttl><webMaster>大朋博客</webMaster><item><title>去除linux PCspeaker（beep）</title><link>http://dpblog.cciz.cc/post/qu-chu-linux%20PCspeaker%EF%BC%88beep%EF%BC%89.html</link><description>The PC speaker can be disabled by unloading the pcspkr and snd_pcsp kernel modules:&#13;
+Note: This will not disable your entire sound system, only the PC speaker.&#13;
+```&#13;
+rmmod pcspkr&#13;
+rmmod snd_pcsp&#13;
+```&#13;
+Blacklisting the pcspkr and snd_pcsp modules will prevent udev from loading them at boot. Create the file:&#13;
+&#13;
+**/etc/modprobe.d/nobeep.conf**&#13;
+```&#13;
+blacklist pcspkr&#13;
+blacklist snd_pcsp&#13;
+```&#13;
+引用&#13;
+[https://wiki.archlinux.org/title/PC_speaker][1]&#13;
+&#13;
+&#13;
+  [1]: https://wiki.archlinux.org/title/PC_speaker。</description><guid isPermaLink="true">http://dpblog.cciz.cc/post/qu-chu-linux%20PCspeaker%EF%BC%88beep%EF%BC%89.html</guid><pubDate>Sat, 05 Oct 2024 12:41:01 +0000</pubDate></item><item><title>xterm美化方法</title><link>http://dpblog.cciz.cc/post/xterm-mei-hua-fang-fa.html</link><description>1、在用户目录下面新建文件.Xresource&#13;
 2、文件内容&#13;
 ```&#13;
 ! TrueType font&#13;
