@@ -1,5 +1,21 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Sat, 05 Oct 2024 13:01:52 +0000</lastBuildDate><managingEditor>大朋博客</managingEditor><ttl>60</ttl><webMaster>大朋博客</webMaster><item><title>rootless模式下docker退出问题解决</title><link>http://dpblog.cciz.cc/post/rootless-mo-shi-xia-docker-tui-chu-wen-ti-jie-jue.html</link><description>rootless模式下，docker容器在帐户退出后也会终止，可以使用以下命令避免logout以后容器进程被杀掉&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Sat, 05 Oct 2024 13:02:19 +0000</lastBuildDate><managingEditor>大朋博客</managingEditor><ttl>60</ttl><webMaster>大朋博客</webMaster><item><title>docker全局限制日志大小</title><link>http://dpblog.cciz.cc/post/docker-quan-ju-xian-zhi-ri-zhi-da-xiao.html</link><description>创建或修改文件 `/etc/docker/daemon.json`，并增加以下配置&#13;
+```&#13;
+{&#13;
+    'log-driver':'json-file',&#13;
+    'log-opts':{&#13;
+        'max-size' :'50m','max-file':'1'&#13;
+    }&#13;
+&#13;
+}&#13;
+```&#13;
+随后重启 Docker 服务&#13;
+```&#13;
+$ sudo systemctl daemon-reload&#13;
+&#13;
+$ sudo systemctl restart docker&#13;
+```&#13;
+不过已存在的容器不会生效，需要重建才可以！。</description><guid isPermaLink="true">http://dpblog.cciz.cc/post/docker-quan-ju-xian-zhi-ri-zhi-da-xiao.html</guid><pubDate>Sat, 05 Oct 2024 13:01:57 +0000</pubDate></item><item><title>rootless模式下docker退出问题解决</title><link>http://dpblog.cciz.cc/post/rootless-mo-shi-xia-docker-tui-chu-wen-ti-jie-jue.html</link><description>rootless模式下，docker容器在帐户退出后也会终止，可以使用以下命令避免logout以后容器进程被杀掉&#13;
 ```&#13;
 loginctl enable-linger $UID&#13;
 ```&#13;
