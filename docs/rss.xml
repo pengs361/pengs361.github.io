@@ -1,5 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Sat, 05 Oct 2024 13:02:52 +0000</lastBuildDate><managingEditor>大朋博客</managingEditor><ttl>60</ttl><webMaster>大朋博客</webMaster><item><title>pve lxc 修改名字</title><link>http://dpblog.cciz.cc/post/pve%20lxc%20-xiu-gai-ming-zi.html</link><description>pve下 vm 可以在选项里面直接修改名字，lxc容器需要自行修改文件。</description><guid isPermaLink="true">http://dpblog.cciz.cc/post/pve%20lxc%20-xiu-gai-ming-zi.html</guid><pubDate>Sat, 05 Oct 2024 13:02:27 +0000</pubDate></item><item><title>docker全局限制日志大小</title><link>http://dpblog.cciz.cc/post/docker-quan-ju-xian-zhi-ri-zhi-da-xiao.html</link><description>创建或修改文件 `/etc/docker/daemon.json`，并增加以下配置&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Sat, 05 Oct 2024 13:03:41 +0000</lastBuildDate><managingEditor>大朋博客</managingEditor><ttl>60</ttl><webMaster>大朋博客</webMaster><item><title>ubuntu移除snap版本firefox并安装deb版本</title><link>http://dpblog.cciz.cc/post/ubuntu-yi-chu-snap-ban-ben-firefox-bing-an-zhuang-deb-ban-ben.html</link><description>- **卸载 Snap Firefox**&#13;
+`sudo snap remove firefox`&#13;
+删除其中的火狐残留&#13;
+`sudo rm -rf /var/lib/snapd/seed/snaps/firefox_*.snap`&#13;
+- **安装标准版 Firefox**&#13;
+创建一个保存 APT 库密钥的目录：&#13;
+    `sudo install -d -m 0755 /etc/apt/keyrings`&#13;
+    导入 Mozilla APT 密钥环：&#13;
+    `wget -q https://packages.mozilla.org/apt/repo-signing-key.gpg -O- | sudo tee /etc/apt/keyrings/packages.mozilla.org.asc &gt; /dev/null`&#13;
+    如果没有安装 wget，请通过命令 sudo apt-get install wget 安装。</description><guid isPermaLink="true">http://dpblog.cciz.cc/post/ubuntu-yi-chu-snap-ban-ben-firefox-bing-an-zhuang-deb-ban-ben.html</guid><pubDate>Sat, 05 Oct 2024 13:03:17 +0000</pubDate></item><item><title>pve lxc 修改名字</title><link>http://dpblog.cciz.cc/post/pve%20lxc%20-xiu-gai-ming-zi.html</link><description>pve下 vm 可以在选项里面直接修改名字，lxc容器需要自行修改文件。</description><guid isPermaLink="true">http://dpblog.cciz.cc/post/pve%20lxc%20-xiu-gai-ming-zi.html</guid><pubDate>Sat, 05 Oct 2024 13:02:27 +0000</pubDate></item><item><title>docker全局限制日志大小</title><link>http://dpblog.cciz.cc/post/docker-quan-ju-xian-zhi-ri-zhi-da-xiao.html</link><description>创建或修改文件 `/etc/docker/daemon.json`，并增加以下配置&#13;
 ```&#13;
 {&#13;
     'log-driver':'json-file',&#13;
