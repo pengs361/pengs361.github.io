@@ -1,5 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Sat, 05 Oct 2024 12:36:36 +0000</lastBuildDate><managingEditor>大朋博客</managingEditor><ttl>60</ttl><webMaster>大朋博客</webMaster><item><title>lychee相册应用部分命令-适用于linuxserver版本docker镜像</title><link>http://dpblog.cciz.cc/post/lychee-xiang-ce-ying-yong-bu-fen-ming-ling---shi-yong-yu-linuxserver-ban-ben-docker-jing-xiang.html</link><description>服务器端导入命令&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Sat, 05 Oct 2024 12:37:25 +0000</lastBuildDate><managingEditor>大朋博客</managingEditor><ttl>60</ttl><webMaster>大朋博客</webMaster><item><title>Windows屏幕控制脚本</title><link>http://dpblog.cciz.cc/post/Windows-ping-mu-kong-zhi-jiao-ben.html</link><description>关闭屏幕.bat  *win7使用已测试*&#13;
+&#13;
+    powershell (Add-Type '[DllImport(\'user32.dll\')]^public static extern int PostMessage(int hWnd, int hMsg, int wParam, int lParam);' -Name a -Pas)::PostMessage(-1,0x0112,0xF170,2)&#13;
+&#13;
+打开屏幕.vbs *win7使用已测试*&#13;
+&#13;
+    Set WShell=CreateObject('Wscript.Shell')&#13;
+    WShell.SendKeys '{F5}'。</description><guid isPermaLink="true">http://dpblog.cciz.cc/post/Windows-ping-mu-kong-zhi-jiao-ben.html</guid><pubDate>Sat, 05 Oct 2024 12:37:01 +0000</pubDate></item><item><title>lychee相册应用部分命令-适用于linuxserver版本docker镜像</title><link>http://dpblog.cciz.cc/post/lychee-xiang-ce-ying-yong-bu-fen-ming-ling---shi-yong-yu-linuxserver-ban-ben-docker-jing-xiang.html</link><description>服务器端导入命令&#13;
 &#13;
     docker exec -it lychee bash -c 'cd app/lychee &amp;&amp; php artisan lychee:sync --skip_duplicates  -vvv /pictures/import/'&#13;
 &#13;
