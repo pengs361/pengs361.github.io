@@ -1,5 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Sat, 05 Oct 2024 12:37:25 +0000</lastBuildDate><managingEditor>大朋博客</managingEditor><ttl>60</ttl><webMaster>大朋博客</webMaster><item><title>Windows屏幕控制脚本</title><link>http://dpblog.cciz.cc/post/Windows-ping-mu-kong-zhi-jiao-ben.html</link><description>关闭屏幕.bat  *win7使用已测试*&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Sat, 05 Oct 2024 12:38:10 +0000</lastBuildDate><managingEditor>大朋博客</managingEditor><ttl>60</ttl><webMaster>大朋博客</webMaster><item><title>安装官方docker版本lychee后调优记录</title><link>http://dpblog.cciz.cc/post/an-zhuang-guan-fang-docker-ban-ben-lychee-hou-diao-you-ji-lu.html</link><description>1、安装完每次启动都会调整权限，这个时间取决于图片库文件数量，通常会很长时间，可以修改启动脚本解决&#13;
+&#13;
+    docker exec -it lychee-web bash -c 'sed -i 's/sym\ \/uploads/sym/g' /entrypoint.sh'&#13;
+2、出于安全考虑，lychee官方不再支持修改land登录背景为在线背景，可以进入容器然后修改配置文件 config/secure-headers.php&#13;
+ &#13;
+&#13;
+    docker exec -it lychee-web bash&#13;
+&#13;
+    sed  -i '/'https:\/\/c.tile.osm.org\/',/a\                                'https:\/\/go.fuyeor.com\/ran\/pic',' config/secure-headers.php&#13;
+&#13;
+附记&#13;
+服务器同步照片命令&#13;
+    docker exec -d  -it lychee-web bash -c ' php artisan lychee:sync --skip_duplicates  -vvv /uploads/import/ --album_id=_I5MQmWwv-dsnFd3-Yaec9il' 。</description><guid isPermaLink="true">http://dpblog.cciz.cc/post/an-zhuang-guan-fang-docker-ban-ben-lychee-hou-diao-you-ji-lu.html</guid><pubDate>Sat, 05 Oct 2024 12:37:47 +0000</pubDate></item><item><title>Windows屏幕控制脚本</title><link>http://dpblog.cciz.cc/post/Windows-ping-mu-kong-zhi-jiao-ben.html</link><description>关闭屏幕.bat  *win7使用已测试*&#13;
 &#13;
     powershell (Add-Type '[DllImport(\'user32.dll\')]^public static extern int PostMessage(int hWnd, int hMsg, int wParam, int lParam);' -Name a -Pas)::PostMessage(-1,0x0112,0xF170,2)&#13;
 &#13;
