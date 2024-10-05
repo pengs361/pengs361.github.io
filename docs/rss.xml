@@ -1,5 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Sat, 05 Oct 2024 12:01:17 +0000</lastBuildDate><managingEditor>大朋博客</managingEditor><ttl>60</ttl><webMaster>大朋博客</webMaster><item><title>思科交换机开启vlan 之间互相访问</title><link>http://dpblog.cciz.cc/post/si-ke-jiao-huan-ji-kai-qi-vlan%20-zhi-jian-hu-xiang-fang-wen.html</link><description>即开启全局访问功能&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Sat, 05 Oct 2024 12:02:40 +0000</lastBuildDate><managingEditor>大朋博客</managingEditor><ttl>60</ttl><webMaster>大朋博客</webMaster><item><title>思科交换机清除端口配置</title><link>http://dpblog.cciz.cc/post/si-ke-jiao-huan-ji-qing-chu-duan-kou-pei-zhi.html</link><description>有两种方法：&#13;
+### cisco清除端口配置命令1&#13;
+在端口模式下，&#13;
+使用 no，&#13;
+比如清除某端口下的IP地址&#13;
+R1(conf-if)#no ip address xxx.xxx.xxx.xxx&#13;
+&#13;
+### 思科清除端口配置命令2，&#13;
+把端口恢复到默认配置就行，&#13;
+在全局模式下，&#13;
+使用default 端口号，&#13;
+比如清除 fastEthernet 0/0&#13;
+R1(config)#default interface fastEthernet 0/0&#13;
+&#13;
+上面清除接口的命令，&#13;
+在思科的路由器，交换机和防火墙上都可以使用。</description><guid isPermaLink="true">http://dpblog.cciz.cc/post/si-ke-jiao-huan-ji-qing-chu-duan-kou-pei-zhi.html</guid><pubDate>Sat, 05 Oct 2024 12:02:16 +0000</pubDate></item><item><title>思科交换机开启vlan 之间互相访问</title><link>http://dpblog.cciz.cc/post/si-ke-jiao-huan-ji-kai-qi-vlan%20-zhi-jian-hu-xiang-fang-wen.html</link><description>即开启全局访问功能&#13;
 ```&#13;
 ip routing&#13;
 ```。</description><guid isPermaLink="true">http://dpblog.cciz.cc/post/si-ke-jiao-huan-ji-kai-qi-vlan%20-zhi-jian-hu-xiang-fang-wen.html</guid><pubDate>Sat, 05 Oct 2024 12:00:54 +0000</pubDate></item><item><title>思科交换机恢复出厂设置</title><link>http://dpblog.cciz.cc/post/si-ke-jiao-huan-ji-hui-fu-chu-chang-she-zhi.html</link><description>Cisco 思科交换机在加电的时候，按住mode键，会进入交换机底层，通过修改交换机原始配置文件名字，重启交换机后，交换机找不到原来配置文件情况下，就会加载默认系统文件（即：交换机出厂配置），以达到清除交换机密码的目的。</description><guid isPermaLink="true">http://dpblog.cciz.cc/post/si-ke-jiao-huan-ji-hui-fu-chu-chang-she-zhi.html</guid><pubDate>Sat, 05 Oct 2024 11:59:37 +0000</pubDate></item><item><title>思科交换机备份与还原</title><link>http://dpblog.cciz.cc/post/si-ke-jiao-huan-ji-bei-fen-yu-huan-yuan.html</link><description>TFTP软件下载：(备份与还原需要使用到的软件)&#13;
