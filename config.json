@@ -26,5 +26,6 @@
     "allHead":"<script src='https://pengs361.github.io/GmeekVercount.js'></script></script><script src='https://pengs361.github.io/num.js'></script>",
     "script":"<script src='https://pengs361.github.io/GmeekTOC.js'></script><script src='https://pengs361.github.io/GmeekVercount.js'>",
     "needComment":0,
+    "useMediumZoom": 1
     "disableCamo":1
 }
