@@ -26,3 +26,4 @@
 ```
     更新软件列表并安装 Firefox .deb 包： 
 `sudo apt-get update && sudo apt-get install firefox`
+<!-- ##{"script":"<script src='https://blog.liyifan.xyz/assets/backtotop.js'></script>"}## -->
