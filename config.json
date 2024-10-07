@@ -21,6 +21,6 @@
     "exlink":{"music":"https://music.meekdai.com"},
     "indexStyle":"<link href='https://dpblog.cciz.cc/css/dpblog.css' rel='stylesheet' />",
     "style": "<link href='https://dpblog.cciz.cc/css/setPic.css' rel='stylesheet' />",
-    "script":"<script src='https://dpblog.cciz.cc/scripts/GmeekTOC.js'></script><script src='https://dpblog.cciz.cc/scripts/lightbox.js'></script><script src='https://dpblog.cciz.cc/scripts/disableCamo.js'></script>",
+    "script":"<script src='https://dpblog.cciz.cc/scripts/GmeekTOC.js'></script><script src='https://dpblog.cciz.cc/scripts/lightbox.js'></script><script src='https://dpblog.cciz.cc/scripts/disableCamo.js'></script><script src='https://dpblog.cciz.cc/scripts/backtop.js'></script>",
     "needComment":0
 }
