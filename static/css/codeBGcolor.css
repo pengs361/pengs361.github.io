@@ -1,8 +1,0 @@
-pre {
-    background-color: #1e1e1e; /* 深色背景 */
-    color: #dcdcdc; /* 文字颜色 */
-    padding: 1em; /* 内边距 */
-    border-radius: 5px; /* 边角圆润 */
-    overflow: auto; /* 处理长代码 */
-    font-family: 'Courier New', Courier, monospace; /* 使用等宽字体 */
-}
