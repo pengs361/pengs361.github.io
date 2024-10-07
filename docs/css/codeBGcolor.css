@@ -1,0 +1,25 @@
+pre {
+    background-color: #282c34; /* 深色背景 */
+    color: #ffffff; /* 文字颜色 */
+    padding: 1em; /* 内边距 */
+    border-radius: 4px; /* 边角圆润 */
+    overflow: auto; /* 处理长代码 */
+}
+
+/* 根据需要添加高亮效果 */
+.hljs {
+    background: #282c34; /* 深色背景 */
+    color: #ffffff; /* 文字颜色 */
+}
+
+.hljs-keyword {
+    color: #c678dd; /* 关键词颜色 */
+}
+
+.hljs-string {
+    color: #98c379; /* 字符串颜色 */
+}
+
+.hljs-function {
+    color: #61dafb; /* 函数颜色 */
+}
