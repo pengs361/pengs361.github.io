@@ -1,4 +1,4 @@
-pre, code {
+pre {
     background-color: #2d2d2d;  /* 深灰色背景 */
     color: #f8f8f2;  /* 浅色字体 */
     padding: 12px;  /* 增加内边距 */
@@ -10,7 +10,7 @@ pre, code {
 }
 
 /* 可选：如果只想针对特定类的代码块 */
-pre.notranslate, code.notranslate {
+pre.notranslate {
     background-color: #2d2d2d;  /* 深灰色背景 */
     color: #f8f8f2;  /* 浅色字体 */
     padding: 12px;
