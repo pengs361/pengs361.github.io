@@ -31,3 +31,15 @@ pre.notranslate, code.notranslate {
     right: 10px;
     top: 10px;
 }
+
+/* 透明背景的复制按钮 */
+.clipboard-container .ClipboardButton {
+    background-color: transparent; /* 设置背景色为透明 */
+    border: none; /* 去掉边框 */
+    cursor: pointer; /* 鼠标悬停时显示为手形光标 */
+    color: #f8f8f2; /* 按钮字体颜色 */
+}
+
+.clipboard-container .ClipboardButton:hover {
+    color: #00f0ff; /* 悬停时改变字体颜色 */
+}
