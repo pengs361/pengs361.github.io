@@ -1,0 +1,33 @@
+pre, code {
+    background-color: #2d2d2d;  /* 深灰色背景 */
+    color: #f8f8f2;  /* 浅色字体 */
+    padding: 12px;  /* 增加内边距 */
+    border-radius: 8px;  /* 圆角边框 */
+    font-family: 'Courier New', monospace;  /* 使用等宽字体 */
+    line-height: 1.5;  /* 提升行间距 */
+    overflow-x: auto;  /* 允许横向滚动，防止代码溢出 */
+    white-space: pre-wrap;  /* 自动换行，避免超长代码溢出 */
+}
+
+/* 可选：如果只想针对特定类的代码块 */
+pre.notranslate, code.notranslate {
+    background-color: #2d2d2d;  /* 深灰色背景 */
+    color: #f8f8f2;  /* 浅色字体 */
+    padding: 12px;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    line-height: 1.5;
+    overflow-x: auto;
+    white-space: pre-wrap;
+}
+
+/* 设置剪贴板按钮的背景和位置 */
+.snippet-clipboard-content {
+    position: relative;
+    overflow: auto;
+}
+.clipboard-container {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
