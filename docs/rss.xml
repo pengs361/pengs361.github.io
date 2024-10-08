@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客 生命不息，折腾不止</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客 生命不息，折腾不止</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Tue, 08 Oct 2024 12:06:02 +0000</lastBuildDate><managingEditor>大朋博客 生命不息，折腾不止</managingEditor><ttl>60</ttl><webMaster>大朋博客 生命不息，折腾不止</webMaster><item><title>测试一下图片</title><link>http://dpblog.cciz.cc/post/ce-shi-yi-xia-tu-pian.html</link><description>&gt;[!NOTE]&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客 生命不息，折腾不止</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客 生命不息，折腾不止</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Tue, 08 Oct 2024 12:30:19 +0000</lastBuildDate><managingEditor>大朋博客 生命不息，折腾不止</managingEditor><ttl>60</ttl><webMaster>大朋博客 生命不息，折腾不止</webMaster><item><title>测试一下图片</title><link>http://dpblog.cciz.cc/post/ce-shi-yi-xia-tu-pian.html</link><description>&gt;[!NOTE]&#13;
 &gt;Useful information that users should know, even when skimming content.&#13;
 &#13;
 &gt; [!TIP]&#13;
@@ -57,7 +57,7 @@ loginctl enable-linger $UID&#13;
 `出处：https://stackoverflow.com/questions/73299883/docker-containers-terminate-on-shell-logout`。</description><guid isPermaLink="true">http://dpblog.cciz.cc/post/rootless-mo-shi-xia-docker-tui-chu-wen-ti-jie-jue.html</guid><pubDate>Sat, 05 Oct 2024 13:01:26 +0000</pubDate></item><item><title>解决vim中文乱码</title><link>http://dpblog.cciz.cc/post/jie-jue-vim-zhong-wen-luan-ma.html</link><description>vi或者vim打开文件后发现里面的中文乱码，可以设置一下编码：&#13;
 &#13;
 修改 ~/.vimrc文件，修改如下&#13;
-```&#13;
+``` shell&#13;
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1&#13;
 set enc=utf8&#13;
 set fencs=utf8,gbk,gb2312,gb18030&#13;
