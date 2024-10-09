@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客 生命不息，折腾不止</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客 生命不息，折腾不止</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Tue, 08 Oct 2024 23:49:45 +0000</lastBuildDate><managingEditor>大朋博客 生命不息，折腾不止</managingEditor><ttl>60</ttl><webMaster>大朋博客 生命不息，折腾不止</webMaster><item><title>测试一下图片</title><link>http://dpblog.cciz.cc/post/ce-shi-yi-xia-tu-pian.html</link><description>&gt;[!NOTE]&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客 生命不息，折腾不止</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客 生命不息，折腾不止</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Wed, 09 Oct 2024 00:05:38 +0000</lastBuildDate><managingEditor>大朋博客 生命不息，折腾不止</managingEditor><ttl>60</ttl><webMaster>大朋博客 生命不息，折腾不止</webMaster><item><title>测试一下图片</title><link>http://dpblog.cciz.cc/post/ce-shi-yi-xia-tu-pian.html</link><description>&gt;[!NOTE]&#13;
 &gt;Useful information that users should know, even when skimming content.&#13;
 &#13;
 &gt; [!TIP]&#13;
@@ -92,7 +92,7 @@ systemctl restart docker&#13;
 ```&#13;
 `来源：https://t2.re/archives/1168/`&#13;
 。</description><guid isPermaLink="true">http://dpblog.cciz.cc/post/Docker-pei-zhi-shi-yong-Socks5-dai-li.html</guid><pubDate>Sat, 05 Oct 2024 12:59:43 +0000</pubDate></item><item><title>Ubuntu 安装docker</title><link>http://dpblog.cciz.cc/post/Ubuntu%20-an-zhuang-docker.html</link><description>- Set up Docker's apt repository.&#13;
-```shell&#13;
+```&#13;
 # Add Docker's official GPG key:&#13;
 sudo apt-get update&#13;
 sudo apt-get install ca-certificates curl&#13;

@@ -11,7 +11,7 @@
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
 <meta name="description" content="- Set up Docker's apt repository.
-```shell
+```
 # Add Docker's official GPG key:
 sudo apt-get update
 sudo apt-get install ca-certificates curl
@@ -36,7 +36,7 @@ sudo docker run hello-world
 ```。">
 <meta property="og:title" content="Ubuntu 安装docker">
 <meta property="og:description" content="- Set up Docker's apt repository.
-```shell
+```
 # Add Docker's official GPG key:
 sudo apt-get update
 sudo apt-get install ca-certificates curl
@@ -63,7 +63,7 @@ sudo docker run hello-world
 <meta property="og:url" content="http://dpblog.cciz.cc/post/Ubuntu%20-an-zhuang-docker.html">
 <meta property="og:image" content="https://pengs361.github.io/favicon.png">
 <title>Ubuntu 安装docker</title>
-<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
+
 
 
 </head>
@@ -126,19 +126,20 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <div class="markdown-body" id="postBody"><ul>
 <li>Set up Docker's apt repository.</li>
 </ul>
-<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#</span> Add Docker's official GPG key:</span>
+<pre class="notranslate"><code class="notranslate"># Add Docker's official GPG key:
 sudo apt-get update
 sudo apt-get install ca-certificates curl
 sudo install -m 0755 -d /etc/apt/keyrings
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
 sudo chmod a+r /etc/apt/keyrings/docker.asc
 
-<span class="pl-c"><span class="pl-c">#</span> Add the repository to Apt sources:</span>
-<span class="pl-c1">echo</span> \
-  <span class="pl-s"><span class="pl-pds">"</span>deb [arch=<span class="pl-s"><span class="pl-pds">$(</span>dpkg --print-architecture<span class="pl-pds">)</span></span> signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu <span class="pl-cce">\</span></span>
-<span class="pl-s">  <span class="pl-s"><span class="pl-pds">$(</span>. /etc/os-release <span class="pl-k">&amp;&amp;</span> <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$VERSION_CODENAME</span><span class="pl-pds">"</span></span><span class="pl-pds">)</span></span> stable<span class="pl-pds">"</span></span> <span class="pl-k">|</span> \
-  sudo tee /etc/apt/sources.list.d/docker.list <span class="pl-k">&gt;</span> /dev/null
-sudo apt-get update</pre></div>
+# Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release &amp;&amp; echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+sudo apt-get update
+</code></pre>
 <ul>
 <li>Install the Docker packages.</li>
 </ul>
