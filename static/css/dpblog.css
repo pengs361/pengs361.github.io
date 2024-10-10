@@ -19,3 +19,7 @@ nav.SideNav {
 div[style*="margin-bottom: 16px;"] {
     font-family: "KaiTi", "SimHei", sans-serif;
 }
+.powered-by {
+    display: none;
+}
+
