@@ -46,3 +46,7 @@ pre.notranslate {
     transition: color 0.3s ease; /* 添加平滑过渡效果 */
     box-shadow: none; /* 去掉阴影 */
 }
+
+#footer2 {
+    display: none;
+}
