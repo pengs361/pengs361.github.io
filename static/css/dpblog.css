@@ -24,4 +24,20 @@ div[style*="margin-bottom: 16px;"] {
     display: none;
 }
 
+#header h1 {
+    color: #2c3e50; /* 深色标题 */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.SideNav-item {
+    background: white; /* 白色背景 */
+    border-radius: 8px; /* 圆角 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    margin-bottom: 10px; /* 项目间隔 */
+    transition: transform 0.2s; /* 动画效果 */
+}
+
+.SideNav-item:hover {
+    transform: scale(1.02); /* 悬停放大效果 */
+}
 
