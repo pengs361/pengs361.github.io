@@ -1,5 +1,26 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客 生命不息，折腾不止</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客 生命不息，折腾不止</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Tue, 15 Oct 2024 11:54:20 +0000</lastBuildDate><managingEditor>大朋博客 生命不息，折腾不止</managingEditor><ttl>60</ttl><webMaster>大朋博客 生命不息，折腾不止</webMaster><item><title>ubuntu移除snap版本firefox并安装deb版本</title><link>http://dpblog.cciz.cc/post/ubuntu-yi-chu-snap-ban-ben-firefox-bing-an-zhuang-deb-ban-ben.html</link><description>- **卸载 Snap Firefox**&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客 生命不息，折腾不止</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客 生命不息，折腾不止</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Tue, 15 Oct 2024 11:58:24 +0000</lastBuildDate><managingEditor>大朋博客 生命不息，折腾不止</managingEditor><ttl>60</ttl><webMaster>大朋博客 生命不息，折腾不止</webMaster><item><title>获取公网ip的api / 地址</title><link>http://dpblog.cciz.cc/post/huo-qu-gong-wang-ip-de-api%20-%20-di-zhi.html</link><description>- ipip.net  &#13;
+```  &#13;
+curl myip.ipip.net/s  &#13;
+```  &#13;
+- ip.sb  &#13;
+```  &#13;
+curl ip.sb  &#13;
+# 或者  &#13;
+curl api.ip.sb/ip  &#13;
+```  &#13;
+&#13;
+- ident.me&#13;
+```&#13;
+curl ident.me&#13;
+```&#13;
+- 3322.net&#13;
+```&#13;
+curl ip.3322.net&#13;
+```&#13;
+&#13;
+&#13;
+。</description><guid isPermaLink="true">http://dpblog.cciz.cc/post/huo-qu-gong-wang-ip-de-api%20-%20-di-zhi.html</guid><pubDate>Tue, 15 Oct 2024 11:48:26 +0000</pubDate></item><item><title>ubuntu移除snap版本firefox并安装deb版本</title><link>http://dpblog.cciz.cc/post/ubuntu-yi-chu-snap-ban-ben-firefox-bing-an-zhuang-deb-ban-ben.html</link><description>- **卸载 Snap Firefox**&#13;
 `sudo snap remove firefox`&#13;
 删除其中的火狐残留&#13;
 `sudo rm -rf /var/lib/snapd/seed/snaps/firefox_*.snap`&#13;
