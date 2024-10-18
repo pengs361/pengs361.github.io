@@ -1,5 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客 生命不息，折腾不止</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客 生命不息，折腾不止</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Tue, 15 Oct 2024 11:58:24 +0000</lastBuildDate><managingEditor>大朋博客 生命不息，折腾不止</managingEditor><ttl>60</ttl><webMaster>大朋博客 生命不息，折腾不止</webMaster><item><title>获取公网ip的api / 地址</title><link>http://dpblog.cciz.cc/post/huo-qu-gong-wang-ip-de-api%20-%20-di-zhi.html</link><description>- ipip.net  &#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客 生命不息，折腾不止</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客 生命不息，折腾不止</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Fri, 18 Oct 2024 02:09:46 +0000</lastBuildDate><managingEditor>大朋博客 生命不息，折腾不止</managingEditor><ttl>60</ttl><webMaster>大朋博客 生命不息，折腾不止</webMaster><item><title>PVE中 qemu guest agent安装和使用</title><link>http://dpblog.cciz.cc/post/PVE-zhong-%20qemu%20guest%20agent-an-zhuang-he-shi-yong.html</link><description>### 客户端安装(不安装会提示Guest Agent未运行)&#13;
+&#13;
+- Linux&#13;
+```&#13;
+#for debian/ubuntu&#13;
+apt install qemu-guest-agent -y&#13;
+```&#13;
+- Windows&#13;
+直接使用virtio驱动光盘安装。</description><guid isPermaLink="true">http://dpblog.cciz.cc/post/PVE-zhong-%20qemu%20guest%20agent-an-zhuang-he-shi-yong.html</guid><pubDate>Fri, 18 Oct 2024 02:09:20 +0000</pubDate></item><item><title>获取公网ip的api / 地址</title><link>http://dpblog.cciz.cc/post/huo-qu-gong-wang-ip-de-api%20-%20-di-zhi.html</link><description>- ipip.net  &#13;
 ```  &#13;
 curl myip.ipip.net/s  &#13;
 ```  &#13;
