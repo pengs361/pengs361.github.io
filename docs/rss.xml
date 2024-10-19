@@ -1,5 +1,26 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客 生命不息，折腾不止</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客 生命不息，折腾不止</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Fri, 18 Oct 2024 02:09:46 +0000</lastBuildDate><managingEditor>大朋博客 生命不息，折腾不止</managingEditor><ttl>60</ttl><webMaster>大朋博客 生命不息，折腾不止</webMaster><item><title>PVE中 qemu guest agent安装和使用</title><link>http://dpblog.cciz.cc/post/PVE-zhong-%20qemu%20guest%20agent-an-zhuang-he-shi-yong.html</link><description>### 客户端安装(不安装会提示Guest Agent未运行)&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客 生命不息，折腾不止</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客 生命不息，折腾不止</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Sat, 19 Oct 2024 06:36:18 +0000</lastBuildDate><managingEditor>大朋博客 生命不息，折腾不止</managingEditor><ttl>60</ttl><webMaster>大朋博客 生命不息，折腾不止</webMaster><item><title>PVE下面通过lxc部署jellyfin，非docker部署</title><link>http://dpblog.cciz.cc/post/PVE-xia-mian-tong-guo-lxc-bu-shu-jellyfin%EF%BC%8C-fei-docker-bu-shu.html</link><description>**lxc模板选择alpine，容器创建的时候要选择特权容器，因为后面需要硬件解码**&#13;
+- 容器里面安装核心显卡驱动&#13;
+```&#13;
+sudo apk add intel-media-driver&#13;
+```&#13;
+- 安装vainfo，测试显卡是否工作正常&#13;
+```&#13;
+apk add libva-utils&#13;
+&#13;
+```&#13;
+- 容器配置文件中添加下面内容&#13;
+```&#13;
+#/etc/pve/lxc/105.conf&#13;
+lxc.cgroup2.devices.allow: c 226:0 rwm&#13;
+lxc.cgroup2.devices.allow: c 226:128 rwm&#13;
+lxc.mount.entry: /dev/dri/card0 dev/dri/card0 none bind,optional,create=file&#13;
+lxc.mount.entry: /dev/dri/renderD128 dev/dri/renderD128 none bind,optional,create=file&#13;
+```&#13;
+- 安装jellyfin&#13;
+```&#13;
+apk add jellyfin jellyfin-web &amp;&amp; rc-update add jellyfin&#13;
+```。</description><guid isPermaLink="true">http://dpblog.cciz.cc/post/PVE-xia-mian-tong-guo-lxc-bu-shu-jellyfin%EF%BC%8C-fei-docker-bu-shu.html</guid><pubDate>Sat, 19 Oct 2024 06:35:54 +0000</pubDate></item><item><title>PVE中 qemu guest agent安装和使用</title><link>http://dpblog.cciz.cc/post/PVE-zhong-%20qemu%20guest%20agent-an-zhuang-he-shi-yong.html</link><description>### 客户端安装(不安装会提示Guest Agent未运行)&#13;
 &#13;
 - Linux&#13;
 ```&#13;
