@@ -30,7 +30,7 @@ lxc.mount.entry: /dev/dri/renderD128 dev/dri/renderD128 none bind,optional,creat
 ```
 - 安装jellyfin
 ```
-apk add jellyfin jellyfin-web && rc-update add jellyfin
+apk add jellyfin jellyfin-web font-noto-cjk font-noto-cjk-extra && rc-update add jellyfin
 ```。">
 <meta property="og:title" content="PVE下面通过lxc部署jellyfin，非docker部署">
 <meta property="og:description" content="**lxc模板选择alpine，容器创建的时候要选择特权容器，因为后面需要硬件解码**
@@ -53,7 +53,7 @@ lxc.mount.entry: /dev/dri/renderD128 dev/dri/renderD128 none bind,optional,creat
 ```
 - 安装jellyfin
 ```
-apk add jellyfin jellyfin-web && rc-update add jellyfin
+apk add jellyfin jellyfin-web font-noto-cjk font-noto-cjk-extra && rc-update add jellyfin
 ```。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://dpblog.cciz.cc/post/PVE-xia-mian-tong-guo-lxc-bu-shu-jellyfin%EF%BC%8C-fei-docker-bu-shu.html">
@@ -143,7 +143,7 @@ lxc.mount.entry: /dev/dri/renderD128 dev/dri/renderD128 none bind,optional,creat
 <ul>
 <li>安装jellyfin</li>
 </ul>
-<pre class="notranslate"><code class="notranslate">apk add jellyfin jellyfin-web &amp;&amp; rc-update add jellyfin
+<pre class="notranslate"><code class="notranslate">apk add jellyfin jellyfin-web font-noto-cjk font-noto-cjk-extra &amp;&amp; rc-update add jellyfin
 </code></pre></div>
 <div style="font-size:small;margin-top:8px;float:right;">❤️ 文章随意转载❤️</div>
 

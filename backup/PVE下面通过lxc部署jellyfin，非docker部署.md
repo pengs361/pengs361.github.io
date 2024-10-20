@@ -18,5 +18,5 @@ lxc.mount.entry: /dev/dri/renderD128 dev/dri/renderD128 none bind,optional,creat
 ```
 - 安装jellyfin
 ```
-apk add jellyfin jellyfin-web && rc-update add jellyfin
+apk add jellyfin jellyfin-web font-noto-cjk font-noto-cjk-extra && rc-update add jellyfin
 ```
