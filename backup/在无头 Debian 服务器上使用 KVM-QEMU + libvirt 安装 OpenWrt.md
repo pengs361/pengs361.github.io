@@ -105,7 +105,7 @@ virt-install --name openwrt \
     --disk path=/var/lib/libvirt/images/openwrt.qcow2,format=qcow2,bus=virtio \
     --network bridge=br0,model=virtio \
     --graphics none --console pty,target_type=serial \
-    --os-type linux --os-variant generic --import
+    --os-variant linux2022 --import
 ```
 
 **参数说明：**
