@@ -200,8 +200,8 @@ virsh shutdown openwrt</pre></div>
 <p>如果需要使用 VNC，可用客户端连接：</p>
 <div class="highlight highlight-source-shell"><pre class="notranslate">vncviewer <span class="pl-k">&lt;</span>服务器IP<span class="pl-k">&gt;</span>:0</pre></div>
 <h3><strong>8.3. 删除 OpenWrt</strong></h3>
-<div class="highlight highlight-source-shell"><pre class="notranslate">virsh destroy openwrt 或 virsh destroy openwrt   --remove-all-storage
-virsh undefine openwrt
+<div class="highlight highlight-source-shell"><pre class="notranslate">virsh destroy openwrt 
+virsh undefine openwrt   或  virsh undefine openwrt --remove-all-storage
 rm -f /var/lib/libvirt/images/openwrt.qcow2</pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;">❤️ 文章随意转载❤️</div>
 

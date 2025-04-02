@@ -175,7 +175,7 @@ vncviewer <服务器IP>:0
 ```
 ### **8.3. 删除 OpenWrt**
 ```sh
-virsh destroy openwrt 或 virsh destroy openwrt   --remove-all-storage
-virsh undefine openwrt
+virsh destroy openwrt 
+virsh undefine openwrt   或  virsh undefine openwrt --remove-all-storage
 rm -f /var/lib/libvirt/images/openwrt.qcow2
 ```
