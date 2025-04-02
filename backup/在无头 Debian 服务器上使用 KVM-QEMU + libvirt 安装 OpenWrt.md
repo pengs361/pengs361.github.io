@@ -74,13 +74,26 @@ wget https://downloads.openwrt.org/releases/23.05.0/targets/x86/64/openwrt-23.05
 ```sh
 gunzip openwrt-23.05.0-x86-64-generic-ext4-combined.img.gz
 ```
-转换为 qcow2 格式（可选，但推荐）：
+创建openwrt虚拟磁盘（qcow2格式）：
 ```sh
-qemu-img convert -f raw -O qcow2 openwrt-23.05.0-x86-64-generic-ext4-combined.img openwrt.qcow2
+qemu-img create -f qcow2 /var/lib/libvirt/images/openwrt.qcow2 1G
 ```
-删除原始文件：
+检查源镜像分区结构
 ```sh
-rm openwrt-23.05.0-x86-64-generic-ext4-combined.img
+virt-filesystems --long -a openwrt-*.img
+```
+执行分区调整和复制
+```sh
+sudo virt-resize \
+  --expand /dev/sda2 \
+  --no-extra-partition \
+  openwrt-23.05.3-x86-64-generic-ext4-combined.img \
+  /var/lib/libvirt/images/openwrt.qcow2
+```
+验证结果
+```sh
+virt-filesystems --long -a /var/lib/libvirt/images/openwrt.qcow2
+qemu-img info /var/lib/libvirt/images/openwrt.qcow2
 ```
 
 ---
@@ -92,7 +105,7 @@ virt-install --name openwrt \
     --disk path=/var/lib/libvirt/images/openwrt.qcow2,format=qcow2,bus=virtio \
     --network bridge=br0,model=virtio \
     --graphics none --console pty,target_type=serial \
-    --os-type linux --os-variant generic
+    --os-type linux --os-variant generic --import
 ```
 
 **参数说明：**
@@ -162,7 +175,7 @@ vncviewer <服务器IP>:0
 ```
 ### **8.3. 删除 OpenWrt**
 ```sh
-virsh destroy openwrt
+virsh destroy openwrt 或 virsh destroy openwrt   --remove-all-storage
 virsh undefine openwrt
 rm -f /var/lib/libvirt/images/openwrt.qcow2
 ```

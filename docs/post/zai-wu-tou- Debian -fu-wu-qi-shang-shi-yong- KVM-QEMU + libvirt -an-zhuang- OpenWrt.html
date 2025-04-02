@@ -136,10 +136,19 @@ iface br0 inet dhcp
 <div class="highlight highlight-source-shell"><pre class="notranslate">wget https://downloads.openwrt.org/releases/23.05.0/targets/x86/64/openwrt-23.05.0-x86-64-generic-ext4-combined.img.gz</pre></div>
 <p>解压：</p>
 <div class="highlight highlight-source-shell"><pre class="notranslate">gunzip openwrt-23.05.0-x86-64-generic-ext4-combined.img.gz</pre></div>
-<p>转换为 qcow2 格式（可选，但推荐）：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">qemu-img convert -f raw -O qcow2 openwrt-23.05.0-x86-64-generic-ext4-combined.img openwrt.qcow2</pre></div>
-<p>删除原始文件：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">rm openwrt-23.05.0-x86-64-generic-ext4-combined.img</pre></div>
+<p>创建openwrt虚拟磁盘（qcow2格式）：</p>
+<div class="highlight highlight-source-shell"><pre class="notranslate">qemu-img create -f qcow2 /var/lib/libvirt/images/openwrt.qcow2 1G</pre></div>
+<p>检查源镜像分区结构</p>
+<div class="highlight highlight-source-shell"><pre class="notranslate">virt-filesystems --long -a openwrt-<span class="pl-k">*</span>.img</pre></div>
+<p>执行分区调整和复制</p>
+<div class="highlight highlight-source-shell"><pre class="notranslate">sudo virt-resize \
+  --expand /dev/sda2 \
+  --no-extra-partition \
+  openwrt-23.05.3-x86-64-generic-ext4-combined.img \
+  /var/lib/libvirt/images/openwrt.qcow2</pre></div>
+<p>验证结果</p>
+<div class="highlight highlight-source-shell"><pre class="notranslate">virt-filesystems --long -a /var/lib/libvirt/images/openwrt.qcow2
+qemu-img info /var/lib/libvirt/images/openwrt.qcow2</pre></div>
 <hr>
 <h1><strong>4. 创建 OpenWrt 虚拟机</strong></h1>
 <div class="highlight highlight-source-shell"><pre class="notranslate">virt-install --name openwrt \
@@ -147,7 +156,7 @@ iface br0 inet dhcp
     --disk path=/var/lib/libvirt/images/openwrt.qcow2,format=qcow2,bus=virtio \
     --network bridge=br0,model=virtio \
     --graphics none --console pty,target_type=serial \
-    --os-type linux --os-variant generic</pre></div>
+    --os-type linux --os-variant generic --import</pre></div>
 <p><strong>参数说明：</strong></p>
 <ul>
 <li><code class="notranslate">--memory 512 --vcpus 1</code> ：分配 512MB 内存和 1 核 CPU</li>
@@ -191,7 +200,7 @@ virsh shutdown openwrt</pre></div>
 <p>如果需要使用 VNC，可用客户端连接：</p>
 <div class="highlight highlight-source-shell"><pre class="notranslate">vncviewer <span class="pl-k">&lt;</span>服务器IP<span class="pl-k">&gt;</span>:0</pre></div>
 <h3><strong>8.3. 删除 OpenWrt</strong></h3>
-<div class="highlight highlight-source-shell"><pre class="notranslate">virsh destroy openwrt
+<div class="highlight highlight-source-shell"><pre class="notranslate">virsh destroy openwrt 或 virsh destroy openwrt   --remove-all-storage
 virsh undefine openwrt
 rm -f /var/lib/libvirt/images/openwrt.qcow2</pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;">❤️ 文章随意转载❤️</div>
