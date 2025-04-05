@@ -1,5 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客 生命不息，折腾不止</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客 生命不息，折腾不止</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Sat, 05 Apr 2025 01:48:54 +0000</lastBuildDate><managingEditor>大朋博客 生命不息，折腾不止</managingEditor><ttl>60</ttl><webMaster>大朋博客 生命不息，折腾不止</webMaster><item><title>在无头 Debian 服务器上使用 KVM/QEMU + libvirt 安装 win10</title><link>http://dpblog.cciz.cc/post/zai-wu-tou-%20Debian%20-fu-wu-qi-shang-shi-yong-%20KVM-QEMU%20%2B%20libvirt%20-an-zhuang-%20win10.html</link><description># **1. 安装 KVM/QEMU 和 libvirt及配置桥接网络**
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客 生命不息，折腾不止</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客 生命不息，折腾不止</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Sat, 05 Apr 2025 08:22:35 +0000</lastBuildDate><managingEditor>大朋博客 生命不息，折腾不止</managingEditor><ttl>60</ttl><webMaster>大朋博客 生命不息，折腾不止</webMaster><item><title>docker 将容器打包成镜像并发布</title><link>http://dpblog.cciz.cc/post/docker%20-jiang-rong-qi-da-bao-cheng-jing-xiang-bing-fa-bu.html</link><description>### 1.登录
+`docker login`
+### 2.打包容器成镜像
+`docker commit web302 web32:v1`
+### 3.给镜像打标签
+`docker tag web32:v1 pen36/web32:v1`
+### 4.推送镜像
+`docker push pen36/web32:v1`。</description><guid isPermaLink="true">http://dpblog.cciz.cc/post/docker%20-jiang-rong-qi-da-bao-cheng-jing-xiang-bing-fa-bu.html</guid><pubDate>Sat, 05 Apr 2025 08:22:15 +0000</pubDate></item><item><title>在无头 Debian 服务器上使用 KVM/QEMU + libvirt 安装 win10</title><link>http://dpblog.cciz.cc/post/zai-wu-tou-%20Debian%20-fu-wu-qi-shang-shi-yong-%20KVM-QEMU%20%2B%20libvirt%20-an-zhuang-%20win10.html</link><description># **1. 安装 KVM/QEMU 和 libvirt及配置桥接网络**
 详见：[在无头 Debian 服务器上使用 KVM/QEMU + libvirt 安装 OpenWrt ](https://dpblog.cciz.cc/post/zai-wu-tou-%20Debian%20-fu-wu-qi-shang-shi-yong-%20KVM-QEMU%20%2B%20libvirt%20-an-zhuang-%20OpenWrt.html)
 # **2. 创建win10虚拟机**
 ```sh
