@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客 生命不息，折腾不止</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客 生命不息，折腾不止</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Fri, 27 Jun 2025 01:34:08 +0000</lastBuildDate><managingEditor>大朋博客 生命不息，折腾不止</managingEditor><ttl>60</ttl><webMaster>大朋博客 生命不息，折腾不止</webMaster><item><title>dmidecode 命令详解</title><link>http://dpblog.cciz.cc/post/dmidecode%20-ming-ling-xiang-jie.html</link><description>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客 生命不息，折腾不止</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客 生命不息，折腾不止</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Fri, 27 Jun 2025 01:52:18 +0000</lastBuildDate><managingEditor>大朋博客 生命不息，折腾不止</managingEditor><ttl>60</ttl><webMaster>大朋博客 生命不息，折腾不止</webMaster><item><title>dmidecode 命令详解</title><link>http://dpblog.cciz.cc/post/dmidecode%20-ming-ling-xiang-jie.html</link><description>
 `dmidecode` 是一个用于提取计算机硬件信息的命令行工具，它通过读取 DMI (Desktop Management Interface) 表来获取系统硬件信息。</description><guid isPermaLink="true">http://dpblog.cciz.cc/post/dmidecode%20-ming-ling-xiang-jie.html</guid><pubDate>Fri, 27 Jun 2025 01:33:41 +0000</pubDate></item><item><title>ubuntu 24.04 取消登录密钥链</title><link>http://dpblog.cciz.cc/post/ubuntu%2024.04%20-qu-xiao-deng-lu-mi-yao-lian.html</link><description>
 
 **⚠️ 警告：此方法会移除密钥链加密保护，存在安全风险，请谨慎使用。</description><guid isPermaLink="true">http://dpblog.cciz.cc/post/ubuntu%2024.04%20-qu-xiao-deng-lu-mi-yao-lian.html</guid><pubDate>Mon, 12 May 2025 12:31:18 +0000</pubDate></item><item><title>qemu-img命令详解</title><link>http://dpblog.cciz.cc/post/qemu-img-ming-ling-xiang-jie.html</link><description>`qemu-img` 是一个用于管理虚拟机磁盘镜像的命令行工具，广泛用于虚拟化环境中，支持多种磁盘镜像格式（如 `qcow2`、`raw`、`vmdk` 等）的创建、转换、修改、信息查看等功能。</description><guid isPermaLink="true">http://dpblog.cciz.cc/post/qemu-img-ming-ling-xiang-jie.html</guid><pubDate>Sun, 06 Apr 2025 02:00:55 +0000</pubDate></item><item><title>docker 将容器打包成镜像并发布</title><link>http://dpblog.cciz.cc/post/docker%20-jiang-rong-qi-da-bao-cheng-jing-xiang-bing-fa-bu.html</link><description>### 1.登录
@@ -405,15 +405,7 @@ R 键：慢速播放倍数 2x,4x,8x,16x,32x&#13;
 ] 键：快退10分钟&#13;
 X 键：停止播放&#13;
 &#13;
-O 键：播放器处理信息。</description><guid isPermaLink="true">http://dpblog.cciz.cc/post/kodi-chang-yong-kuai-jie-jian.html</guid><pubDate>Sat, 05 Oct 2024 12:45:43 +0000</pubDate></item><item><title>忘忧草</title><link>http://dpblog.cciz.cc/post/wang-you-cao.html</link><description>- 让软弱的我们懂得残忍&#13;
-- 狠狠面对人生每次寒冷&#13;
-- 依依不舍的爱过的人&#13;
-- 往往有缘没有份&#13;
-- 谁把谁真的当真&#13;
-- 谁为谁心疼&#13;
-- 谁是唯一谁的人&#13;
-- 伤痕累累的天真的灵魂&#13;
-- 早已不承认还有什么神。</description><guid isPermaLink="true">http://dpblog.cciz.cc/post/wang-you-cao.html</guid><pubDate>Sat, 05 Oct 2024 12:43:55 +0000</pubDate></item><item><title>解决Linux使用fcitx5输入法无法输入问题</title><link>http://dpblog.cciz.cc/post/jie-jue-Linux-shi-yong-fcitx5-shu-ru-fa-wu-fa-shu-ru-wen-ti.html</link><description>1、在Debian系统及其衍生发行版中安装：&#13;
+O 键：播放器处理信息。</description><guid isPermaLink="true">http://dpblog.cciz.cc/post/kodi-chang-yong-kuai-jie-jian.html</guid><pubDate>Sat, 05 Oct 2024 12:45:43 +0000</pubDate></item><item><title>解决Linux使用fcitx5输入法无法输入问题</title><link>http://dpblog.cciz.cc/post/jie-jue-Linux-shi-yong-fcitx5-shu-ru-fa-wu-fa-shu-ru-wen-ti.html</link><description>1、在Debian系统及其衍生发行版中安装：&#13;
 &#13;
     apt-get install  fcitx5-frontend-qt5 fcitx5-frontend-gtk2 fcitx5-frontend-gtk3 fcitx5-pinyin fcitx5-chinese-addons fcitx5-chewing fcitx5-module-lua fcitx5-module-lua-common fcitx5-modules unicode-cldr-core&#13;
 &#13;
