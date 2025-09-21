@@ -63,7 +63,14 @@ echo "file 'part2.mp4'" >> files.txt
 
 # 合并
 ffmpeg -f concat -safe 0 -i files.txt -c copy output.mp4
+```
+---
 
+### (2) **不同编码视频（需转码）**
+
+```bash
+ffmpeg -i part1.mp4 -i part2.mp4 -filter_complex "[0:v][0:a][1:v][1:a]concat=n=2:v=1:a=1[outv][outa]" -map "[outv]" -map "[outa]" output.mp4
+```
 ---
 
 ## 8️⃣ 添加字幕

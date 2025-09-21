@@ -75,7 +75,14 @@ echo 'file 'part2.mp4'' >> files.txt
 
 # 合并
 ffmpeg -f concat -safe 0 -i files.txt -c copy output.mp4
+```
+---
 
+### (2) **不同编码视频（需转码）**
+
+```bash
+ffmpeg -i part1.mp4 -i part2.mp4 -filter_complex '[0:v][0:a][1:v][1:a]concat=n=2:v=1:a=1[outv][outa]' -map '[outv]' -map '[outa]' output.mp4
+```
 ---
 
 ## 8️⃣ 添加字幕
@@ -170,7 +177,14 @@ echo 'file 'part2.mp4'' >> files.txt
 
 # 合并
 ffmpeg -f concat -safe 0 -i files.txt -c copy output.mp4
+```
+---
 
+### (2) **不同编码视频（需转码）**
+
+```bash
+ffmpeg -i part1.mp4 -i part2.mp4 -filter_complex '[0:v][0:a][1:v][1:a]concat=n=2:v=1:a=1[outv][outa]' -map '[outv]' -map '[outa]' output.mp4
+```
 ---
 
 ## 8️⃣ 添加字幕
@@ -439,35 +453,99 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>file 'part2.mp4'<span class="pl-pds">"</span></span> <span class="pl-k">&gt;&gt;</span> files.txt
 
 <span class="pl-c"><span class="pl-c">#</span> 合并</span>
-ffmpeg -f concat -safe 0 -i files.txt -c copy output.mp4
-
----
-
-<span class="pl-c"><span class="pl-c">#</span># 8️⃣ 添加字幕</span>
-<span class="pl-k">|</span> 功能 <span class="pl-k">|</span> 命令 <span class="pl-k">|</span> 说明 <span class="pl-k">|</span>
-<span class="pl-k">|</span>------<span class="pl-k">|</span>------<span class="pl-k">|</span>------<span class="pl-k">|</span>
-<span class="pl-k">|</span> 内嵌字幕（烧录） <span class="pl-k">|</span> <span class="pl-s"><span class="pl-pds">`</span>ffmpeg -i input.mp4 -vf subtitles=sub.srt output.mp4<span class="pl-pds">`</span></span> <span class="pl-k">|</span> 字幕写入视频画面 <span class="pl-k">|</span>
-<span class="pl-k">|</span> 外挂字幕（不重编码） <span class="pl-k">|</span> <span class="pl-s"><span class="pl-pds">`</span>ffmpeg -i input.mp4 -i sub.srt -c copy -c:s mov_text output.mp4<span class="pl-pds">`</span></span> <span class="pl-k">|</span> 保留独立字幕流 <span class="pl-k">|</span>
-
----
-
-<span class="pl-c"><span class="pl-c">#</span># 9️⃣ 压缩与优化</span>
-<span class="pl-k">|</span> 功能 <span class="pl-k">|</span> 命令 <span class="pl-k">|</span> 说明 <span class="pl-k">|</span>
-<span class="pl-k">|</span>------<span class="pl-k">|</span>------<span class="pl-k">|</span>------<span class="pl-k">|</span>
-<span class="pl-k">|</span> 固定码率压缩 <span class="pl-k">|</span> <span class="pl-s"><span class="pl-pds">`</span>ffmpeg -i input.mp4 -b:v 1000k -b:a 128k output.mp4<span class="pl-pds">`</span></span> <span class="pl-k">|</span> 控制视频+音频码率 <span class="pl-k">|</span>
-<span class="pl-k">|</span> CRF 模式（推荐） <span class="pl-k">|</span> <span class="pl-s"><span class="pl-pds">`</span>ffmpeg -i input.mp4 -c:v libx264 -crf 23 -preset veryslow -c:a aac -b:a 128k output.mp4<span class="pl-pds">`</span></span> <span class="pl-k">|</span> <span class="pl-s"><span class="pl-pds">`</span>crf=18-28<span class="pl-pds">`</span></span>，数值越小质量越高 <span class="pl-k">|</span>
-<span class="pl-k">|</span> 去掉音频 <span class="pl-k">|</span> <span class="pl-s"><span class="pl-pds">`</span>ffmpeg -i input.mp4 -an output.mp4<span class="pl-pds">`</span></span> <span class="pl-k">|</span> 只保留视频 <span class="pl-k">|</span>
-
----
-
-<span class="pl-c"><span class="pl-c">#</span># 🔟 高级技巧</span>
-<span class="pl-k">|</span> 功能 <span class="pl-k">|</span> 命令 <span class="pl-k">|</span> 说明 <span class="pl-k">|</span>
-<span class="pl-k">|</span>------<span class="pl-k">|</span>------<span class="pl-k">|</span>------<span class="pl-k">|</span>
-<span class="pl-k">|</span> 给视频加水印 <span class="pl-k">|</span> <span class="pl-s"><span class="pl-pds">`</span>ffmpeg -i input.mp4 -i logo.png -filter_complex <span class="pl-s"><span class="pl-pds">"</span>overlay=10:10<span class="pl-pds">"</span></span> output.mp4<span class="pl-pds">`</span></span> <span class="pl-k">|</span> 左上角水印 <span class="pl-k">|</span>
-<span class="pl-k">|</span> 拼接画中画 <span class="pl-k">|</span> <span class="pl-s"><span class="pl-pds">`</span>ffmpeg -i main.mp4 -i small.mp4 -filter_complex <span class="pl-s"><span class="pl-pds">"</span>overlay=10:10<span class="pl-pds">"</span></span> output.mp4<span class="pl-pds">`</span></span> <span class="pl-k">|</span> 小窗口嵌入 <span class="pl-k">|</span>
-<span class="pl-k">|</span> 双视频对比（左右拼接） <span class="pl-k">|</span> <span class="pl-s"><span class="pl-pds">`</span>ffmpeg -i left.mp4 -i right.mp4 -filter_complex hstack output.mp4<span class="pl-pds">`</span></span> <span class="pl-k">|</span> 横向拼接 <span class="pl-k">|</span>
-<span class="pl-k">|</span> 倍速播放（2 倍） <span class="pl-k">|</span> <span class="pl-s"><span class="pl-pds">`</span>ffmpeg -i input.mp4 -vf <span class="pl-s"><span class="pl-pds">"</span>setpts=0.5*PTS<span class="pl-pds">"</span></span> output.mp4<span class="pl-pds">`</span></span> <span class="pl-k">|</span> 视频加速 <span class="pl-k">|</span>
-<span class="pl-k">|</span> 慢速播放（0.5 倍） <span class="pl-k">|</span> <span class="pl-s"><span class="pl-pds">`</span>ffmpeg -i input.mp4 -vf <span class="pl-s"><span class="pl-pds">"</span>setpts=2.0*PTS<span class="pl-pds">"</span></span> output.mp4<span class="pl-pds">`</span></span> <span class="pl-k">|</span> 视频减速 <span class="pl-k">|</span></pre></div></div>
+ffmpeg -f concat -safe 0 -i files.txt -c copy output.mp4</pre></div>
+<hr>
+<h3>(2) <strong>不同编码视频（需转码）</strong></h3>
+<div class="highlight highlight-source-shell"><pre class="notranslate">ffmpeg -i part1.mp4 -i part2.mp4 -filter_complex <span class="pl-s"><span class="pl-pds">"</span>[0:v][0:a][1:v][1:a]concat=n=2:v=1:a=1[outv][outa]<span class="pl-pds">"</span></span> -map <span class="pl-s"><span class="pl-pds">"</span>[outv]<span class="pl-pds">"</span></span> -map <span class="pl-s"><span class="pl-pds">"</span>[outa]<span class="pl-pds">"</span></span> output.mp4</pre></div>
+<hr>
+<h2>8️⃣ 添加字幕</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>功能</th>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>内嵌字幕（烧录）</td>
+<td><code class="notranslate">ffmpeg -i input.mp4 -vf subtitles=sub.srt output.mp4</code></td>
+<td>字幕写入视频画面</td>
+</tr>
+<tr>
+<td>外挂字幕（不重编码）</td>
+<td><code class="notranslate">ffmpeg -i input.mp4 -i sub.srt -c copy -c:s mov_text output.mp4</code></td>
+<td>保留独立字幕流</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<hr>
+<h2>9️⃣ 压缩与优化</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>功能</th>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>固定码率压缩</td>
+<td><code class="notranslate">ffmpeg -i input.mp4 -b:v 1000k -b:a 128k output.mp4</code></td>
+<td>控制视频+音频码率</td>
+</tr>
+<tr>
+<td>CRF 模式（推荐）</td>
+<td><code class="notranslate">ffmpeg -i input.mp4 -c:v libx264 -crf 23 -preset veryslow -c:a aac -b:a 128k output.mp4</code></td>
+<td><code class="notranslate">crf=18-28</code>，数值越小质量越高</td>
+</tr>
+<tr>
+<td>去掉音频</td>
+<td><code class="notranslate">ffmpeg -i input.mp4 -an output.mp4</code></td>
+<td>只保留视频</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<hr>
+<h2>🔟 高级技巧</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>功能</th>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>给视频加水印</td>
+<td><code class="notranslate">ffmpeg -i input.mp4 -i logo.png -filter_complex "overlay=10:10" output.mp4</code></td>
+<td>左上角水印</td>
+</tr>
+<tr>
+<td>拼接画中画</td>
+<td><code class="notranslate">ffmpeg -i main.mp4 -i small.mp4 -filter_complex "overlay=10:10" output.mp4</code></td>
+<td>小窗口嵌入</td>
+</tr>
+<tr>
+<td>双视频对比（左右拼接）</td>
+<td><code class="notranslate">ffmpeg -i left.mp4 -i right.mp4 -filter_complex hstack output.mp4</code></td>
+<td>横向拼接</td>
+</tr>
+<tr>
+<td>倍速播放（2 倍）</td>
+<td><code class="notranslate">ffmpeg -i input.mp4 -vf "setpts=0.5*PTS" output.mp4</code></td>
+<td>视频加速</td>
+</tr>
+<tr>
+<td>慢速播放（0.5 倍）</td>
+<td><code class="notranslate">ffmpeg -i input.mp4 -vf "setpts=2.0*PTS" output.mp4</code></td>
+<td>视频减速</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table></div>
 <div style="font-size:small;margin-top:8px;float:right;">❤️ 文章随意转载❤️</div>
 
 </div>
