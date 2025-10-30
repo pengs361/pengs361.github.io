@@ -1,5 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客 生命不息，折腾不止</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客 生命不息，折腾不止</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Sun, 21 Sep 2025 08:36:41 +0000</lastBuildDate><managingEditor>大朋博客 生命不息，折腾不止</managingEditor><ttl>60</ttl><webMaster>大朋博客 生命不息，折腾不止</webMaster><item><title>ffmpeg常用命令示例</title><link>http://dpblog.cciz.cc/post/ffmpeg-chang-yong-ming-ling-shi-li.html</link><description># 🎬 ffmpeg 常用命令大全
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客 生命不息，折腾不止</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客 生命不息，折腾不止</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Thu, 30 Oct 2025 10:45:24 +0000</lastBuildDate><managingEditor>大朋博客 生命不息，折腾不止</managingEditor><ttl>60</ttl><webMaster>大朋博客 生命不息，折腾不止</webMaster><item><title>How to Activate Windows</title><link>http://dpblog.cciz.cc/post/How%20to%20Activate%20Windows.html</link><description>Open PowerShell
+Click the Start Menu, type PowerShell, then open it.
+
+Copy and paste the code below, then press enter.
+    **For Windows 8, 10, 11: 📌**
+    `irm https://get.activated.win | iex`
+
+**If the above is blocked (by ISP/DNS), try this (needs updated Windows 10 or 11):**
+
+`iex (curl.exe -s --doh-url https://1.1.1.1/dns-query https://get.activated.win | Out-String)`
+
+**For Windows 7 and later:**
+
+`iex ((New-Object Net.WebClient).DownloadString('https://get.activated.win'))`
+
+。</description><guid isPermaLink="true">http://dpblog.cciz.cc/post/How%20to%20Activate%20Windows.html</guid><pubDate>Thu, 30 Oct 2025 10:44:51 +0000</pubDate></item><item><title>ffmpeg常用命令示例</title><link>http://dpblog.cciz.cc/post/ffmpeg-chang-yong-ming-ling-shi-li.html</link><description># 🎬 ffmpeg 常用命令大全
 
 ## 1️⃣ 基本操作
 | 功能 | 命令 | 说明 |
