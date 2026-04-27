@@ -1,5 +1,117 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客 生命不息，折腾不止</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客 生命不息，折腾不止</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Sat, 29 Nov 2025 16:13:00 +0000</lastBuildDate><managingEditor>大朋博客 生命不息，折腾不止</managingEditor><ttl>60</ttl><webMaster>大朋博客 生命不息，折腾不止</webMaster><item><title>网络打印机扫描功能配置记录</title><link>http://dpblog.cciz.cc/post/wang-luo-da-yin-ji-sao-miao-gong-neng-pei-zhi-ji-lu.html</link><description>### windows系统配置
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>大朋博客 生命不息，折腾不止</title><link>http://dpblog.cciz.cc</link><description>大鹏一日同风起，扶摇直上九万里</description><copyright>大朋博客 生命不息，折腾不止</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pengs361.github.io/favicon.png</url><title>avatar</title><link>http://dpblog.cciz.cc</link></image><lastBuildDate>Mon, 27 Apr 2026 22:35:25 +0000</lastBuildDate><managingEditor>大朋博客 生命不息，折腾不止</managingEditor><ttl>60</ttl><webMaster>大朋博客 生命不息，折腾不止</webMaster><item><title>netsh winsock reset与netsh int ip reset详解</title><link>http://dpblog.cciz.cc/post/netsh%20winsock%20reset-yu-netsh%20int%20ip%20reset-xiang-jie.html</link><description>这两个命令都是 Windows 里常见的“网络修复大招”，但作用层级不一样，别混为一谈：
+
+
+---
+
+1️⃣ netsh winsock reset
+
+👉 重置的是 Winsock（Windows Socket）协议栈
+
+可以把 Winsock 理解成： 👉 应用程序（浏览器、软件）和网络之间的“接口层”
+
+这个命令会做什么：
+
+清空 Winsock 目录（Catalog）
+
+移除第三方插入的网络组件（比如代理、LSP）
+
+恢复为系统默认状态
+
+
+常见解决问题：
+
+浏览器打不开网页，但网络看起来正常
+
+被流氓软件/代理劫持
+
+VPN、加速器卸载后网络异常
+
+
+📌 说人话：
+👉 修“软件层”的网络问题
+
+
+---
+
+2️⃣ netsh int ip reset
+
+👉 重置的是 TCP/IP 协议栈（更底层）
+
+这个命令会做什么：
+
+重置 IP 配置
+
+清除路由表
+
+重建 TCP/IP 注册表项
+
+相当于重新安装网络协议（逻辑层）
+
+
+常见解决问题：
+
+IP 地址异常（比如 169.254.x.x）
+
+DHCP 获取失败
+
+网络完全连不上
+
+网卡配置被搞乱
+
+
+📌 说人话：
+👉 修“系统层”的网络问题
+
+
+---
+
+🧠 两个命令的区别（重点）
+
+命令	修复层级	类比
+
+winsock reset	应用接口层	修软件接口
+int ip reset	网络协议层	重装网络系统
+
+
+
+---
+
+⚠️ 注意事项
+
+1. 执行后必须重启电脑（否则效果不完整）
+
+
+2. int ip reset 会：
+
+清掉静态 IP
+
+清掉 DNS 设置 👉 你之前手动配的网络参数会没了
+
+
+
+3. VPN / 代理 / 某些安全软件可能需要重新配置
+
+
+
+
+---
+
+💡 实战建议
+
+如果遇到网络问题，建议顺序是：
+
+1️⃣ 先用：
+
+netsh winsock reset
+
+👉 不行再用：
+
+2️⃣
+
+netsh int ip reset
+
+👉 这是“更猛”的一刀。</description><guid isPermaLink="true">http://dpblog.cciz.cc/post/netsh%20winsock%20reset-yu-netsh%20int%20ip%20reset-xiang-jie.html</guid><pubDate>Mon, 27 Apr 2026 22:32:06 +0000</pubDate></item><item><title>网络打印机扫描功能配置记录</title><link>http://dpblog.cciz.cc/post/wang-luo-da-yin-ji-sao-miao-gong-neng-pei-zhi-ji-lu.html</link><description>### windows系统配置
 
 1. 创建并配置共享目录saomiao可读写。</description><guid isPermaLink="true">http://dpblog.cciz.cc/post/wang-luo-da-yin-ji-sao-miao-gong-neng-pei-zhi-ji-lu.html</guid><pubDate>Sat, 29 Nov 2025 02:02:50 +0000</pubDate></item><item><title>How to Activate Windows</title><link>http://dpblog.cciz.cc/post/How%20to%20Activate%20Windows.html</link><description>Open PowerShell
 Click the Start Menu, type PowerShell, then open it.
